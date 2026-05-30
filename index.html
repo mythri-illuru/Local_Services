@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FixMate App</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script defer src="app.js"></script>
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header class="header">
+
+  <div class="logo">
+    FixMate
+  </div>
+
+  <div class="search">
+
+    <input
+    type="text"
+    placeholder="Search services..."
+    id="searchInput">
+
+    <i class="fa fa-search"></i>
+
+  </div>
+
+  <i class="fa fa-user-circle user"></i>
+
+</header>
+
+
+
+<!-- HOME PAGE -->
+
+<div id="homePage">
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <h1>Home Services</h1>
+
+    <p>Book trusted professionals instantly</p>
+
+    <button>Book Now</button>
+
+  </section>
+
+
+
+  <!-- CATEGORIES -->
+
+  
+
+  <section class="categories">
+
+    <h2>Popular Services</h2>
+
+    <div class="category-grid">
+
+      <div class="category-card" onclick="openService('Plumber')">🔧 Plumber</div>
+
+<div class="category-card" onclick="openService('Electrician')">⚡ Electrician</div>
+
+<div class="category-card" onclick="openService('Cleaning')">🧹 Cleaning</div>
+
+<div class="category-card" onclick="openService('Painter')">🎨 Painter</div>
+
+<div class="category-card" onclick="openService('Carpenter')">🪑 Carpenter</div>
+
+<div class="category-card" onclick="openService('AC Repair')">❄️ AC Repair</div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- SERVICES -->
+
+  <section class="services">
+
+    <h2>Recommended</h2>
+
+    <div class="service-card">
+
+      <h3>Deep Cleaning</h3>
+
+      <p>₹499 onwards</p>
+
+      <button>Book</button>
+
+    </div>
+
+
+    <div class="service-card">
+
+      <h3>Plumbing Repair</h3>
+
+      <p>Fast & Trusted Experts</p>
+
+      <button>Book</button>
+
+    </div>
+
+  </section>
+
+</div>
+
+
+
+
+
+<!-- CATEGORIES PAGE -->
+
+<div id="categoriesPage" style="display:none;">
+
+  <h2 class="page-title">
+    Categories
+  </h2>
+
+  <section class="category-page">
+
+    <div class="cat-card" onclick="openService('Plumber')">
+
+  🔧 Plumber
+
+  <button onclick="addFavorite('Plumber')">
+    ❤️
+  </button>
+
+<div class="cat-card">
+
+  <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
+
+  <h3>Plumber</h3>
+
+  <p>Pipe leakage & bathroom repairs</p>
+
+  <h4>Starting ₹299</h4>
+
+  <button onclick="openService('Plumber')">
+    Book Now
+  </button>
+
+</div>
+
+  ⚡Electrician
+  <button onclick="addFavorite('Electrician')">
+    ❤️
+  </button>
+
+
+<div class="cat-card">
+
+  <img src="https://cdn-icons-png.flaticon.com/512/2920/2920349.png">
+
+  <h3>Electrician</h3>
+
+  <p>Wiring & switch repairs</p>
+
+  <h4>Starting ₹399</h4>
+
+  <button onclick="openService('Electrician')">
+    Book Now
+  </button>
+
+</div>
+
+
+   🧹Cleaning
+
+  <button onclick="addFavorite('Cleaning')">
+    ❤️
+  </button>
+
+<div class="cat-card">
+
+  <img src="https://cdn-icons-png.flaticon.com/512/995/995053.png">
+
+  <h3>Cleaning</h3>
+
+  <p>Deep home cleaning services</p>
+
+  <h4>Starting ₹499</h4>
+
+  <button onclick="openService('Cleaning')">
+    Book Now
+  </button>
+  </div>
+
+
+   🖌️Painting
+
+  <button onclick="addFavorite('Painting')">
+    ❤️
+  </button>
+
+<div class="cat-card">
+  <img src="https://cdn-icons-png.flaticon.com/512/995/995053.png">
+  <h3>Painter</h3> 
+  <p>Deep home painting services</p>
+    <h4>Starting ₹499</h4>
+    <button onclick="openService('Painting')">
+     Book Now
+    </button>
+</div>
+
+   🪚Carpenter
+
+  <button onclick="addFavorite('Carpenter')">
+    ❤️
+  </button>
+
+<div class="cat-card">
+  <img src="https://cdn-icons-png.flaticon.com/512/995/995053.png">
+  <h3>carpenter</h3> 
+  <p>Deep home carpenter services</p>
+    <h4>Starting ₹499</h4>
+    <button onclick="openService('Carpenter')">
+     Book Now
+    </button>
+</div>
+   AC Repair
+
+  <button onclick="addFavorite('AC Repair')">
+    ❤️
+  </button>
+
+<div class="cat-card">
+  <img src="https://cdn-icons-png.flaticon.com/512/995/995053.png">
+  <h3>ac repair</h3> 
+  <p>Deep home ac repair services</p>
+    <h4>Starting ₹499</h4>
+    <button onclick="openService('AC Repair')">
+     Book Now
+    </button>
+</div>
+
+<h2 class="page-title">Top Workers</h2>
+
+<div class="worker-card">
+
+  <h3>Ramesh Plumber</h3>
+
+  <p>⭐ 4.8 Rating</p>
+
+  <p>₹299 Visit Charge</p>
+
+  <button>Contact</button>
+
+</div>
+
+
+<div class="worker-card">
+
+  <h3>Suresh Electrician</h3>
+
+  <p>⭐ 4.7 Rating</p>
+
+  <p>₹399 Service</p>
+
+  <button>Contact</button>
+
+</div>
+
+<h2 class="page-title">
+  Favorite Services
+</h2>
+
+<div id="favoriteList">
+
+</div>
+<div class="cat-search">
+
+  <input
+  type="text"
+  id="categorySearch"
+  placeholder="Search services...">
+
+</div>
+    </section>
+
+</div>
+
+
+
+
+
+<!-- BOOKINGS PAGE -->
+
+<div id="bookingsPage" style="display:none;">
+
+  <h2 class="page-title">
+    My Bookings
+  </h2>
+
+  <div id="bookingList">
+
+  <div class="service-card">
+
+    <h3>No Bookings Yet</h3>
+
+    <p>Your bookings appear here</p>
+
+  </div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+  <div id="profilePage" style="display:none;">
+
+  <div class="profile-header">
+
+  
+
+   <img
+src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+class="profile-pic"
+id="profilePic">
+  <input
+type="file"
+id="profileUpload"
+accept="image/*"
+onchange="uploadProfilePhoto()">
+
+    <h2 id="welcomeText">Mythri</h2>
+
+    <p>example@gmail.com</p>
+
+  </div>
+
+  <div class="profile-menu">
+    <div class="service-card">
+
+  <h3>📍 My Address</h3>
+
+  <p id="userAddress">
+    No Address Added
+  </p>
+
+  <button onclick="addAddress()">
+    Add Address
+  </button>
+
+</div>
+
+    <div class="service-card" onclick="toggleDarkMode()">
+    ⚙️Settings
+    </div>
+
+  <div class="service-card" onclick="toggleDarkMode()">
+    🌙 Dark Mode
+  </div>
+
+  <div class="service-card" onclick="clearBookings()">
+    🗑 Clear Bookings
+  </div>
+
+  <div class="service-card" onclick="clearFavorites()">
+    ❤️ Clear Favorites
+  </div>
+
+  <div class="service-card" onclick="logoutUser()">
+    🚪 Logout
+  </div>
+</div>
+
+</div>
+
+
+
+
+<nav class="bottom-nav">
+
+  <div onclick="showHome()">
+    <i class="fa fa-home"></i>
+    <p>Home</p>
+  </div>
+
+  <div onclick="showCategories()">
+    <i class="fa fa-th-large"></i>
+    <p>Categories</p>
+  </div>
+
+  <div onclick="showBookings()">
+    <i class="fa fa-shopping-bag"></i>
+    <p>Bookings</p>
+  </div>
+
+  <div onclick="showProfile()">
+    <i class="fa fa-user"></i>
+    <p>Profile</p>
+  </div>
+
+</nav>
+
+<!-- SERVICE POPUP -->
+
+<div id="servicePopup" class="popup">
+
+  <div class="popup-content">
+
+    <span class="close-btn" onclick="closePopup()">
+      &times;
+    </span>
+
+    <h2 id="serviceTitle">
+      Service Name
+    </h2>
+    <div class="worker-info">
+
+  <img
+  src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+  class="worker-photo">
+
+  <h3>Ramesh Kumar</h3>
+
+  <p>⭐ 4.8 Rating</p>
+
+  <p>🏆 5 Years Experience</p>
+
+  <p>📞 9876543210</p>
+
+</div>
+
+    <p>
+      Trusted professionals available near you.
+    </p>
+    <label>Select Date</label>
+
+<input type="date" id="bookingDate">
+
+
+<label>Select Time</label>
+
+<input type="time" id="bookingTime">
+   <button onclick="openWhatsApp()">
+  💬 WhatsApp
+</button>
+    <button onclick="bookService()">
+      Confirm Booking
+    </button>
+
+    <button onclick="clearBookings()">
+  🗑 Clear All Bookings
+</button>
+
+  </div>
+
+</div>
+
+<div id="notification">
+
+</div>
+
+
+</body>
+</html>
